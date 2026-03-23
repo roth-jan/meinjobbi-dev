@@ -2,10 +2,15 @@ self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [
       {
-        "source": "/proxy/:path*"
+        "source": "/meinjobbi-dev/proxy/:path*"
       }
     ],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/meinjobbi-dev//_next/:path+",
+        "destination": "/meinjobbi-dev/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
