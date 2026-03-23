@@ -1,0 +1,5 @@
+:HL["/_next/static/chunks/ada30c3d89aed983.css","style"]
+:HL["/_next/static/chunks/7dca4d948b2b08de.css","style"]
+:HL["/_next/static/media/ce62453a442c7f35-s.p.124b2306.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/chunks/2e63aa3c65ec17f7.css","style"]
+0:{"buildId":"q3HrR0eOiEwlRLn_I1_4U","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"tv","paramType":null,"paramKey":"tv","hasRuntimePrefetch":false,"slots":{"children":{"name":"schoolCode","paramType":"d","paramKey":"10007","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

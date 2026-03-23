@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Foffer\u002F[offerid]","\u002Ftv\u002F[schoolCode]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
