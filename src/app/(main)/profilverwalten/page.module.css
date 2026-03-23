@@ -1,0 +1,82 @@
+/* Extra right padding for profilverwalten */
+.card {
+    padding-right: 350px;
+}
+
+/* Logo upload row - aligned to 2nd column */
+.logoActions {
+    display: flex;
+    align-items: flex-start;
+}
+
+.logoActionsLabel {
+    width: 360px;
+    min-width: 360px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding-right: 15px;
+    }
+
+    .logoActions {
+        flex-direction: column;
+    }
+
+    .logoActionsLabel {
+        display: none;
+    }
+}
+
+/* Horizontal 2-column form layout */
+.card :global(.mantine-InputWrapper-root) {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.card :global(.mantine-InputWrapper-label) {
+    width: 360px;
+    min-width: 360px;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 1rem;
+}
+
+.card :global(.mantine-Input-wrapper) {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .card :global(.mantine-InputWrapper-root) {
+        flex-direction: column;
+    }
+
+    .card :global(.mantine-InputWrapper-label) {
+        width: auto;
+        min-width: auto;
+        padding-top: 0;
+        font-size: 16px;
+    }
+
+    .card :global(.mantine-Input-wrapper) {
+        width: 100%;
+    }
+}
+
+/* Footer wrapper - offset parent paddings */
+.footerWrapper {
+    position: relative;
+    margin-top: 100px;
+    margin-left: -24px;
+    margin-right: -24px;
+}
+
+@media (min-width: 1024px) {
+    .footerWrapper {
+        margin-left: -170px;
+        margin-right: -170px;
+    }
+}

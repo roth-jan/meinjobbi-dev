@@ -1,0 +1,350 @@
+/* Hero Section */
+.heroSection {
+    display: flex;
+    gap: 75px;
+    align-items: flex-start;
+}
+
+/* Logo Box */
+.logoBox {
+    width: 285px;
+    height: 285px;
+    min-width: 285px;
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+}
+
+.logoContainer {
+    position: relative;
+    width: 90%;
+    height: 90%;
+}
+
+.logoImage {
+    object-fit: contain;
+}
+
+.logoPlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hero Content */
+.heroContent {
+    flex: 1;
+    padding-top: 12px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--color-accent-alt);
+    padding: 5px 16px;
+    border-radius: 50px;
+    font-size: var(--font-copytext);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: var(--font-headline-2);
+    line-height: var(--font-headline-2-lh);
+    margin: 0 0 24px 0;
+    font-weight: 700;
+}
+
+.description {
+    font-size: var(--font-subtext);
+    line-height: var(--font-subtext-lh);
+    font-weight: var(--font-subtext-weight);
+    margin: 0 0 32px 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .heroSection {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .logoBox {
+        width: 220px;
+        height: 220px;
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        gap: 40px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .logoBox {
+        width: 155px;
+        height: 155px;
+        min-width: 155px;
+    }
+}
+
+/* Auf einen Blick Section */
+.blickSection {
+    position: relative;
+    margin-top: 150px;
+    padding-top: 50px;
+}
+
+.blickTitle {
+    color: var(--color-accent-alt);
+    font-weight: 900;
+    opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.infoBox {
+    position: relative;
+    z-index: 1;
+    background: #000;
+    border-radius: 30px;
+    padding: 50px 120px 40px;
+    min-height: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 0 30px rgba(88, 0, 255, 0.36);
+}
+
+.infoColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.infoLabel {
+    font-weight: 700;
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    color: #fff;
+}
+
+.infoValue {
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    color: #fff;
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 40px;
+    padding-bottom: 60px;
+}
+
+/* Content Sections */
+.section {
+    margin-top: 80px;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sectionTitle {
+    font-size: var(--font-headline-3);
+    line-height: var(--font-headline-3-lh);
+    font-weight: 700;
+    margin: 0 0 24px 0;
+}
+
+.sectionContent {
+    font-size: var(--font-subtext);
+    line-height: var(--font-subtext-lh);
+    font-weight: var(--font-subtext-weight);
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* Contact Box */
+.contactBox {
+    margin-top: 150px;
+    background: var(--color-primary);
+    border-radius: 32px;
+    padding: 70px 90px 70px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    width: 1175px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.contactLeft {
+    flex: 1;
+    max-width: 60%;
+}
+
+.contactLeft .sectionTitle {
+    margin-bottom: 16px;
+}
+
+.contactRight {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.contactInfo {
+    font-size: var(--font-subtext);
+    line-height: var(--font-subtext-lh);
+    font-weight: 700;
+    color: #fff;
+    text-align: left;
+}
+
+.contactArrow {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    height: 90%;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .blickSection {
+        margin-top: 80px;
+        padding-top: 60px;
+    }
+
+    .infoBox {
+        padding: 30px 60px;
+        min-height: 180px;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blickSection {
+        margin-top: 60px;
+        padding-top: 60px;
+    }
+
+    .blickTitle {
+        top: 35px;
+    }
+
+    .infoBox {
+        padding: 30px 24px 30px 40px;
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .buttonRow {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .section {
+        margin-top: 50px;
+    }
+
+    .infoColumn {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        position: relative;
+        width: 100%;
+    }
+
+    .infoColumn::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 95%;
+        height: 2px;
+        background: #333;
+    }
+
+    .infoColumn:first-child {
+        padding-top: 0;
+    }
+
+    .infoColumn:last-child::after {
+        display: none;
+    }
+
+    .infoColumn:last-child {
+        padding-bottom: 0;
+    }
+
+    .contactBox {
+        padding: 30px 24px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contactLeft {
+        max-width: 100%;
+    }
+
+    .contactRight {
+        align-items: flex-start;
+    }
+
+    .contactArrow {
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        height: 80%;
+        opacity: 40%;
+    }
+}
+
+/* Footer */
+.footerWrapper {
+    position: relative;
+    margin-top: 100px;
+    margin-left: -24px;
+    margin-right: -24px;
+}
+
+.footerWrapper > div {
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .footerWrapper {
+        margin-left: -170px;
+        margin-right: -170px;
+    }
+}

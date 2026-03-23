@@ -1,0 +1,1027 @@
+/* Footer wrapper */
+
+/* Data grid container */
+.gridContainer {
+	width: 100%;
+	background: #ffffff;
+	border-radius: 16px;
+	padding: 100px;
+}
+
+/* Table styling */
+.dataTable {
+	width: 100%;
+	border-collapse: collapse;
+	background: transparent;
+}
+
+.dataTable th {
+	font: normal normal normal 14px/16px Roboto, sans-serif;
+	color: var(--color-text-on-light-alt);
+	text-align: left;
+	padding: 12px 16px;
+	border: none;
+	border-bottom: 1px solid var(--color-border-light);
+}
+
+.dataTable td {
+	padding: 16px;
+	border: none;
+	vertical-align: middle;
+	text-align: center;
+	font: normal normal normal 16px/21px Roboto, sans-serif;
+	letter-spacing: 0.18px;
+	color: var(--color-text-on-light-alt);
+}
+
+.dataTable tbody tr:first-child td {
+	border-top: 1px solid var(--color-border-light);
+}
+
+.dataTable tbody tr {
+	border-bottom: 1px solid var(--color-border-light);
+}
+
+.dataTable tbody tr:hover {
+	background: rgba(88, 0, 255, 0.05);
+}
+
+.disabledRow {
+	opacity: 0.5;
+}
+
+/* Column widths */
+.colId {
+	width: 60px;
+}
+
+.colTitle {
+	text-align: left;
+}
+
+.colType {
+	width: 120px;
+}
+
+.colPlacement {
+	width: 180px;
+}
+
+.colDate {
+	width: 140px;
+}
+
+.colStatus {
+	width: 140px;
+}
+
+.colActions {
+	width: 100px;
+}
+
+/* Werbung name - clickable */
+.werbungName {
+	font: normal normal normal 16px/21px Roboto, sans-serif;
+	letter-spacing: 0.18px;
+	color: var(--color-text-on-light-alt);
+	cursor: pointer;
+}
+
+.werbungName:hover {
+	color: var(--color-primary);
+}
+
+.werbungType {
+	font: normal normal normal 14px/18px Roboto, sans-serif;
+	color: var(--color-text-muted);
+}
+
+/* Switch toggle */
+.switchContainer {
+	position: relative;
+	width: 118px;
+	height: 40px;
+}
+
+.switchInput {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.switchSlider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 118px;
+	height: 40px;
+	background: #e7f1fe;
+	border-radius: 20px;
+	transition: background 0.3s ease;
+	left: -60px;
+}
+
+.switchSlider::before {
+	position: absolute;
+	content: "";
+	height: 32px;
+	width: 32px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	border-radius: 50%;
+	transition: transform 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switchInput:checked + .switchSlider {
+	background: var(--color-primary);
+}
+
+.switchInput:checked + .switchSlider::before {
+	transform: translateX(78px);
+}
+
+.switchInput:disabled + .switchSlider {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Action buttons */
+.actionButton {
+	border: none;
+	box-shadow: none;
+	background: none;
+	color: #b7c5d6;
+	cursor: pointer;
+	padding: 8px;
+	border-radius: 4px;
+	transition: color 0.2s ease;
+}
+
+.actionButton:hover {
+	color: var(--color-primary);
+}
+
+.buttonMargin {
+	margin-right: 5px;
+}
+
+/* Button row */
+.buttonRow {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+/* Jobbi button */
+.jobbiButton {
+	box-shadow: none;
+	width: 238px;
+	height: 55px;
+	text-transform: none;
+	font: normal normal 700 18px/23px Roboto, sans-serif;
+	letter-spacing: 0.27px;
+	border-radius: 50px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.jobbiButtonOrange {
+	background: var(--color-accent-light);
+	color: #ffffff;
+}
+
+.jobbiButtonOrange:hover {
+	background: var(--color-accent-hover);
+}
+
+.jobbiButtonOutline {
+	color: var(--color-accent-light);
+	border: 2px solid var(--color-accent-light);
+	background: transparent;
+}
+
+.jobbiButtonOutline:hover {
+	background: rgba(255, 170, 59, 0.1);
+}
+
+.jobbiButtonOutlineBlue {
+	color: var(--color-text-muted);
+	border: 2px solid var(--color-text-muted);
+	background: transparent;
+}
+
+.jobbiButtonOutlineBlue:hover {
+	background: rgba(93, 129, 177, 0.1);
+}
+
+.newButton {
+	width: 280px;
+}
+
+/* Pagination */
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 1rem 0;
+	font: normal normal 400 14px/20px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+}
+
+.paginationButton {
+	background: transparent;
+	border: 1px solid var(--color-primary);
+	color: var(--color-primary);
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.paginationButton:hover:not(:disabled) {
+	background: var(--color-primary);
+	color: white;
+}
+
+.paginationButton:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.paginationInfo {
+	margin: 0 1rem;
+}
+
+/* Delete confirmation popup */
+.popupOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+}
+
+.popupContent {
+	background: #ffffff;
+	padding: 2.5rem;
+	border-radius: 20px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+	max-width: 500px;
+	text-align: center;
+}
+
+.popupTitle {
+	font: normal normal 700 24px/32px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+	margin-bottom: 1rem;
+}
+
+.popupText {
+	font: normal normal 400 16px/24px Roboto, sans-serif;
+	color: var(--color-text-muted);
+	margin-bottom: 2rem;
+}
+
+.popupButtons {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.popupButtonCancel {
+	width: 150px;
+	height: 50px;
+	background: transparent;
+	border: 2px solid var(--color-text-muted);
+	color: var(--color-text-muted);
+	border-radius: 30px;
+	font: normal normal 600 16px/24px Roboto, sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.popupButtonCancel:hover {
+	background: rgba(93, 129, 177, 0.1);
+}
+
+.popupButtonDelete {
+	width: 150px;
+	height: 50px;
+	background: var(--color-danger);
+	border: none;
+	color: #ffffff;
+	border-radius: 30px;
+	font: normal normal 600 16px/24px Roboto, sans-serif;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.popupButtonDelete:hover {
+	background: var(--color-danger-hover);
+}
+
+.footerWrapper {
+	position: relative;
+	margin-top: 70px;
+	margin-left: -24px;
+	margin-right: -24px;
+}
+
+@media (min-width: 1024px) {
+	.footerWrapper {
+		margin-left: -170px;
+		margin-right: -170px;
+	}
+}
+
+/* ============ WIZARD STYLES ============ */
+
+/* Wizard container */
+.wizardContainer {
+	width: 100%;
+	max-width: 1000px;
+	background: #ffffff;
+	border-radius: 20px;
+	padding: 2rem 3rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	margin: 0 auto 2rem;
+}
+
+/* Wizard header */
+.wizardHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 2rem;
+}
+
+.wizardTitleSection {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.stepIndicator {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.stepText {
+	font: normal normal 300 18px/27px Roboto, sans-serif;
+	color: var(--color-text-muted);
+}
+
+.stepCurrent {
+	font: normal normal 700 18px/27px Roboto, sans-serif;
+	color: var(--color-text-muted);
+}
+
+.closeButton {
+	width: 40px;
+	height: 40px;
+	border: 2px solid var(--color-accent-light);
+	border-radius: 50%;
+	background: transparent;
+	color: var(--color-accent-light);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+	background: var(--color-accent-light);
+	color: white;
+}
+
+/* Wizard content */
+.wizardContent {
+	min-height: 400px;
+}
+
+/* Wizard navigation */
+.wizardNavigation {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+	margin-top: 3rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--color-border-light);
+}
+
+.navButtonBack {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 12px 24px;
+	background: transparent;
+	border: 2px solid var(--color-text-muted);
+	border-radius: 30px;
+	color: var(--color-text-muted);
+	font: normal normal 600 16px/24px Roboto, sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.navButtonBack:hover {
+	background: rgba(93, 129, 177, 0.1);
+}
+
+.navButtonNext {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 12px 24px;
+	background: var(--color-accent-light);
+	border: none;
+	border-radius: 30px;
+	color: white;
+	font: normal normal 600 16px/24px Roboto, sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.navButtonNext:hover:not(:disabled) {
+	background: var(--color-accent-hover);
+}
+
+.navButtonDisabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Page text - matching .page-text */
+.pageText {
+	text-align: left;
+	font: 500 20px/27px Roboto, sans-serif;
+	letter-spacing: 0;
+	color: var(--color-text-on-light);
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.pageTextNoMargin {
+	text-align: left;
+	font: 500 20px/27px Roboto, sans-serif;
+	letter-spacing: 0;
+	color: var(--color-text-on-light);
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+/* ============ STEP 0 STYLES ============ */
+
+.step0Container {
+	padding: 1rem 0;
+}
+
+.typeSelectorsRow {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.typeSelector {
+	flex: 1;
+	min-width: 300px;
+	max-width: 400px;
+	cursor: pointer;
+	padding: 20px;
+	border: 2px solid transparent;
+	border-radius: 12px;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.typeSelector::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(93, 129, 177, 0.05);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.typeSelector:hover {
+	border-color: var(--color-text-muted);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(93, 129, 177, 0.15);
+}
+
+.typeSelector:hover::before {
+	opacity: 1;
+}
+
+.typeSelectorSelected {
+	border-color: var(--color-text-muted);
+	background: rgba(93, 129, 177, 0.08);
+	transform: scale(1.02);
+	box-shadow: 0 6px 20px rgba(93, 129, 177, 0.2);
+}
+
+.typeSelectorSelected::before {
+	opacity: 1;
+	background: rgba(93, 129, 177, 0.1);
+}
+
+.typeSelectorLabel {
+	font: normal normal 700 18px/24px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+}
+
+.typeSelectorContent {
+	margin-left: 2.5rem;
+	margin-top: 1rem;
+}
+
+.typeSelectorDescription {
+	font: normal normal 300 16px/24px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+	text-align: left;
+	margin-bottom: 1rem;
+}
+
+.typeSelectorImage {
+	width: 100%;
+	max-width: 250px;
+	border: 1px solid var(--color-text-muted);
+	border-radius: 6px;
+	transition: transform 0.3s ease;
+}
+
+.typeSelectorSelected .typeSelectorImage {
+	transform: scale(1.02);
+}
+
+.typeSelectorImageCaption {
+	font: normal normal 400 14px/20px Roboto, sans-serif;
+	color: var(--color-text-muted);
+	margin-top: 0.5rem;
+}
+
+/* ============ STEP 1 STYLES ============ */
+
+.step1Container {
+	padding: 1rem 0;
+}
+
+.placementSelectorsRow {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+
+.placementSelector {
+	flex: 1;
+	min-width: 200px;
+	max-width: 280px;
+	cursor: pointer;
+	padding: 1rem;
+	text-align: center;
+}
+
+.placementSelectorLabel {
+	font: normal normal 500 16px/24px Roboto, sans-serif;
+	color: var(--color-text-muted);
+}
+
+.placementSelectorImage {
+	width: 220px;
+	border-radius: 6px;
+	margin: 1rem 0;
+	transition: all 0.2s ease;
+}
+
+.placementImageSelected {
+	border: 2px solid var(--color-text-muted);
+}
+
+.placementImageUnselected {
+	border: 1px solid var(--color-text-muted);
+}
+
+.placementSelectorDescription {
+	font: normal normal 400 14px/20px Roboto, sans-serif;
+	color: var(--color-text-muted);
+	text-align: center;
+}
+
+/* ============ STEP 2 STYLES ============ */
+
+.step2Container {
+	padding: 1rem 0;
+}
+
+/* Form row */
+.formRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 1.5rem;
+}
+
+.formRow label {
+	font-weight: 500;
+	font-size: 1rem;
+	color: var(--color-text-on-light);
+	margin-right: 2rem;
+	min-width: 160px;
+}
+
+.inputLimited {
+	position: relative;
+	flex: 1;
+	max-width: 500px;
+	margin-left: auto;
+}
+
+.formInput {
+	width: 100%;
+	height: 50px;
+	border: 1px solid var(--color-text-muted);
+	border-radius: 200px;
+	padding: 0 20px;
+	font: normal normal 400 16px/24px Roboto, sans-serif;
+	color: var(--color-text-muted);
+	background: transparent;
+	outline: none;
+	transition: border-color 0.2s ease;
+	box-sizing: border-box;
+}
+
+.formInput:focus {
+	border-color: var(--color-accent-light);
+}
+
+.formInput::placeholder {
+	color: var(--color-text-muted);
+	opacity: 0.55;
+}
+
+.formSelect {
+	width: 100%;
+	height: 50px;
+	border: 1px solid var(--color-text-muted);
+	border-radius: 200px;
+	padding: 0 20px;
+	font: normal normal 400 16px/24px Roboto, sans-serif;
+	color: var(--color-text-muted);
+	background: transparent;
+	outline: none;
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235D81B1' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 20px center;
+	box-sizing: border-box;
+}
+
+.formSelect:focus {
+	border-color: var(--color-accent-light);
+}
+
+.requiredAsterisk {
+	position: absolute;
+	top: 50%;
+	right: -25px;
+	transform: translateY(-50%);
+	color: var(--color-accent-light);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.uploadRow {
+	display: flex;
+	gap: 1rem;
+}
+
+.uploadRow .formInput {
+	flex: 1;
+}
+
+.uploadButton {
+	min-width: 120px;
+	height: 50px;
+	background: var(--color-accent-light);
+	color: white;
+	border: none;
+	border-radius: 30px;
+	font: normal normal 600 14px/20px Roboto, sans-serif;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.uploadButton:hover {
+	background: var(--color-accent-hover);
+}
+
+/* ============ STEP 3 STYLES ============ */
+
+.step3Container {
+	padding: 1rem 0;
+}
+
+.localizationCheckbox {
+	margin-bottom: 2rem;
+	padding-left: 160px;
+}
+
+.citiesGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 1rem;
+}
+
+/* Checkbox styling */
+.checkboxContainer {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.checkboxInput {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
+.checkboxMark {
+	width: 32px;
+	height: 32px;
+	border: 2px solid #e7f1fe;
+	border-radius: 50%;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #e7f1fe;
+	transition: all 0.2s ease;
+	flex-shrink: 0;
+}
+
+.checkboxMark.checked {
+	background-color: white;
+	border: 1px solid #cadbf2;
+}
+
+.checkboxMark.checked svg {
+	color: var(--color-accent-light);
+}
+
+.checkboxLabel {
+	font: normal normal 500 16px/24px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+}
+
+.disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* ============ STEP 4 STYLES ============ */
+
+.step4Container {
+	padding: 1rem 0;
+}
+
+.summarySection {
+	margin-bottom: 1rem;
+}
+
+.summaryDivider {
+	border: none;
+	border-top: 1px solid #b7c5d6;
+	opacity: 0.5;
+	margin: 2rem 0;
+}
+
+.summaryRow {
+	display: flex;
+	padding: 0.5rem 0;
+	gap: 1rem;
+}
+
+.summaryLabel {
+	font: normal normal 500 16px/24px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+	min-width: 140px;
+}
+
+.summaryValue {
+	font: normal normal 400 16px/24px Roboto, sans-serif;
+	color: var(--color-text-muted);
+}
+
+.placementPreviewRow {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+
+.placementPreviewItem {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 200px;
+}
+
+.placementPreviewLabel {
+	font: normal normal 500 14px/20px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+}
+
+.placementPreviewImage {
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid var(--color-border-light);
+}
+
+/* Cost summary box */
+.costSummaryBox {
+	background: #f4f8ff;
+	border-radius: 0 0 20px 20px;
+	padding: 2rem;
+	margin-top: 2rem;
+	margin-left: -3rem;
+	margin-right: -3rem;
+	margin-bottom: -2rem;
+}
+
+.costSubtitle {
+	font: normal normal 400 16px/24px Roboto, sans-serif;
+	color: var(--color-text-muted);
+	margin-bottom: 0.5rem;
+}
+
+.costDuration {
+	font: normal normal 400 16px/24px Roboto, sans-serif;
+	color: var(--color-text-muted);
+	margin-bottom: 1.5rem;
+}
+
+.costRow {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 0;
+}
+
+.costLabel {
+	font: normal normal 450 18px/27px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+}
+
+.costPrice {
+	font: normal normal 450 18px/27px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+}
+
+.costTotalRow {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 0;
+}
+
+.costTotalLabel {
+	font: normal normal 700 22px/27px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+}
+
+.costTotalPrice {
+	font: normal normal 700 22px/27px Roboto, sans-serif;
+	color: var(--color-text-on-light);
+}
+
+.summaryButtons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 1080px) {
+	.dataTable {
+		display: block;
+		overflow-x: auto;
+	}
+
+	.newButton {
+		width: 100%;
+	}
+
+	.buttonRow {
+		justify-content: center;
+	}
+
+	.typeSelectorsRow {
+		flex-direction: column;
+	}
+
+	.typeSelector {
+		max-width: none;
+	}
+
+	.placementSelectorsRow {
+		justify-content: center;
+	}
+
+	.formRow {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.formRow label {
+		margin-bottom: 0.5rem;
+		margin-right: 0;
+	}
+
+	.inputLimited {
+		width: 100%;
+		max-width: none;
+		margin-left: 0;
+	}
+
+	.localizationCheckbox {
+		padding-left: 0;
+	}
+
+	.costSummaryBox {
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
+		padding: 1.5rem;
+	}
+
+	.summaryButtons {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.jobbiButton {
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
+@media (max-width: 768px) {
+	.wizardContainer {
+		padding: 1.5rem;
+	}
+
+	.switchContainer {
+		width: 80px;
+	}
+
+	.switchSlider {
+		width: 80px;
+	}
+
+	.switchInput:checked + .switchSlider::before {
+		transform: translateX(40px);
+	}
+
+	.wizardHeader {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.closeButton {
+		align-self: flex-end;
+	}
+
+	.wizardNavigation {
+		flex-direction: column;
+	}
+
+	.navButtonBack,
+	.navButtonNext {
+		width: 100%;
+		justify-content: center;
+	}
+}

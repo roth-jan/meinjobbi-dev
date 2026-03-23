@@ -1,0 +1,40 @@
+.container {
+    min-height: 100%;
+}
+
+.header {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.description {
+    max-width: 630px;
+    margin: 45px auto 0;
+    font-size: var(--font-subtext);
+    line-height: var(--font-subtext-lh);
+    font-weight: var(--font-subtext-weight);
+}
+
+
+.footerWrapper {
+    position: relative;
+    margin-top: 100px;
+    margin-left: -24px;
+    margin-right: -24px;
+}
+
+.footerWrapper > div {
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .footerWrapper {
+        margin-left: -170px;
+        margin-right: -170px;
+    }
+}

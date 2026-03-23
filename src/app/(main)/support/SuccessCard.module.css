@@ -1,0 +1,43 @@
+.card {
+    width: 700px;
+    height: 350px;
+    max-width: 100%;
+    background: var(--color-primary);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.icon {
+    margin-bottom: 32px;
+}
+
+.title {
+    color: #eaf3f8;
+    font-size: var(--font-headline-3);
+    line-height: var(--font-headline-3-lh);
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.text {
+    color: #eaf3f8;
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    font-weight: 500;
+    max-width: 380px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+        padding: 30px 20px;
+    }
+}

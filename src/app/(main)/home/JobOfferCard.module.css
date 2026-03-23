@@ -1,0 +1,152 @@
+.card {
+    background: #000000;
+    border-radius: 32px;
+    box-shadow: 0 0 30px rgba(88, 0, 255, 0.36);
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        height: 440px;
+        padding: 6px;
+        gap: 70px;
+        position: relative;
+    }
+}
+
+/* Logo Section */
+.logoSection {
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.logoContainer {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.logo {
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.logoPlaceholder {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .content {
+        width: 570px;
+        padding-top: 100px;
+    }
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.buttonWrapper {
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+}
+
+.companyName {
+    color: white;
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    font-weight: 500;
+}
+
+.jobTitleWrapper {
+    max-height: calc(var(--font-headline-3) * 1.2 * 2);
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+}
+
+.jobTitle {
+    color: white;
+    font-size: var(--font-headline-3);
+    font-weight: 700;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.description {
+    color: white;
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    font-weight: 500;
+    opacity: 0.85;
+    flex: 1;
+}
+
+@media (min-width: 1024px) {
+    .description {
+        height: 435px;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 6px;
+    }
+
+    .logoSection {
+        width: 100%;
+        height: auto;
+    }
+
+    .logoContainer,
+    .logoPlaceholder {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .jobTitleWrapper {
+        max-height: calc(1.5rem * 1.2 * 2);
+    }
+
+    .jobTitle {
+        font-size: 1.5rem;
+    }
+
+
+    .content {
+        padding: 1rem;
+    }
+
+    .buttonWrapper {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+}

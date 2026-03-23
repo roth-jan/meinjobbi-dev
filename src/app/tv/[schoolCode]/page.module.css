@@ -1,0 +1,66 @@
+.tvPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 1.5vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.8vw;
+    flex-shrink: 0;
+}
+
+.schoolInfo {
+    padding-top: 1.75vw;
+    padding-left: 2.5vw;
+    padding-bottom: 1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    object-fit: contain;
+    width: 12vw;
+    height: auto;
+    margin-right: 2.5vw;
+    /*filter: invert(1);*/
+}
+
+.schoolName {
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: #333;
+}
+
+.schoolCity {
+    font-size: 1.2vw;
+    color: #666;
+}
+
+.errorTitle {
+    font-size: 2.5vw;
+    color: #333;
+}
+
+.errorText {
+    font-size: 1.3vw;
+    color: #666;
+}
+
+.carouselContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    position: relative;
+}

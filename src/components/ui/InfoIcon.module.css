@@ -1,0 +1,14 @@
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-accent-light);
+  color: white;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  font-size: 13px;
+  font-style: italic;
+}

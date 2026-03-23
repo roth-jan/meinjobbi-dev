@@ -1,0 +1,203 @@
+.carouselContainer {
+    margin-bottom: 85px;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel :global(.mantine-Carousel-viewport) {
+    border-radius: 32px;
+    /* box-shadow: 0 0 30px rgba(88, 0, 255, 0.36); */
+}
+
+.carousel :global(.mantine-Carousel-viewport),
+.carousel :global(.mantine-Carousel-container),
+.carousel :global(.mantine-Carousel-slide) {
+    height: 100%;
+}
+
+.carousel :global(.mantine-Carousel-indicators) {
+    position: relative;
+    margin-top: 36px;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.carousel :global(.mantine-Carousel-indicator) {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transition: background 0.2s ease;
+}
+
+.carousel :global(.mantine-Carousel-indicator[data-active]) {
+    background: white;
+}
+
+.card {
+    background: var(--color-primary);
+    border-radius: 32px;
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        height: 440px;
+        padding: 6px;
+        gap: 70px;
+        position: relative;
+    }
+}
+
+.logoSection {
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.logoContainer {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.logo {
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.logoPlaceholder {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .content {
+        width: 570px;
+        padding-top: 100px;
+    }
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.topRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.topAngebot {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--color-accent-alt);
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    font-weight: 700;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+}
+
+.buttonWrapper {
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+}
+
+.companyName {
+    color: white;
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    font-weight: 500;
+}
+
+.jobTitleWrapper {
+    max-height: calc(var(--font-headline-3) * 1.2 * 2);
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+}
+
+.jobTitle {
+    color: white;
+    font-size: var(--font-headline-3);
+    font-weight: 700;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.description {
+    color: white;
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 6px;
+    }
+
+    .logoSection {
+        width: 100%;
+        height: auto;
+    }
+
+    .logoContainer,
+    .logoPlaceholder {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .jobTitleWrapper {
+        max-height: calc(1.5rem * 1.2 * 2);
+    }
+
+    .jobTitle {
+        font-size: 1.5rem;
+    }
+
+
+    .content {
+        padding: 1rem;
+    }
+
+    .buttonWrapper {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .carousel :global(.mantine-Carousel-indicators) {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+}

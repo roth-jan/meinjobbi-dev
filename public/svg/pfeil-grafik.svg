@@ -1,0 +1,14 @@
+<svg id="Navigations-Arrows" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="195.016" height="247.274" viewBox="0 0 195.016 247.274">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.033" y1="0.479" x2="1" y2="0.482" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f7a335"/>
+      <stop offset="1" stop-color="#f7a335" stop-opacity="0.184"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rechteck_1866" data-name="Rechteck 1866" width="195.016" height="247.274" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Gruppe_7263" data-name="Gruppe 7263" clip-path="url(#clip-path)">
+    <path id="Pfad_13956" data-name="Pfad 13956" d="M118.2,247.274a1.267,1.267,0,0,1-1.27-1.27V167.3a1.272,1.272,0,0,1,.427-.95l48.764-43.278v-.09L117.359,79.7a1.271,1.271,0,0,1-.427-.949V1.271a1.27,1.27,0,0,1,2.133-.932l88.544,81.782a1.265,1.265,0,0,1,.408.932v81.169a1.267,1.267,0,0,1-.408.932l-88.544,81.783a1.271,1.271,0,0,1-.862.337m1.27-79.408V243.1l86-79.436V83.609l-86-79.436v74l48.763,43.281a1.269,1.269,0,0,1,.428.95v1.231a1.266,1.266,0,0,1-.428.949ZM1.27,247.274A1.267,1.267,0,0,1,0,246V167.3a1.272,1.272,0,0,1,.427-.95l48.764-43.278v-.09L.427,79.7A1.271,1.271,0,0,1,0,78.749V1.271A1.27,1.27,0,0,1,2.133.339L90.678,82.121a1.27,1.27,0,0,1,.408.932v81.169a1.272,1.272,0,0,1-.408.932L2.133,246.937a1.271,1.271,0,0,1-.862.337m1.27-79.408V243.1l86.005-79.436V83.609L2.54,4.173v74L51.3,121.457a1.272,1.272,0,0,1,.427.95v1.231a1.269,1.269,0,0,1-.427.949Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

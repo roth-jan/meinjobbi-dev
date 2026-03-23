@@ -1,0 +1,113 @@
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.sectionTitle {
+    color: var(--color-accent-alt);
+    font-size: 20px;
+    line-height: var(--font-subtext-lh);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.fullWidth {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.input {
+    background: var(--color-primary);
+    border: none;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0 24px;
+    color: white;
+    font-size: 16px;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.textarea {
+    background: var(--color-primary);
+    border: none;
+    border-radius: 30px;
+    padding: 20px 24px;
+    color: white;
+    font-size: 16px;
+    min-height: 180px;
+}
+
+.textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.requiredAsterisk {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.inputWrapper:has(.textarea) .requiredAsterisk {
+    top: 20px;
+    transform: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.checkboxLabel {
+    font-size: 14px;
+}
+
+.link {
+    color: var(--color-accent-alt);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .footer button {
+        align-self: flex-end;
+    }
+}

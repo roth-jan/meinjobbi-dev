@@ -1,0 +1,131 @@
+.container {
+    padding: 3rem 0 1.5rem 0;
+    margin-top: 12rem;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 4rem 0;
+        margin-top: 32rem;
+    }
+}
+
+.title {
+    color: var(--color-accent-alt);
+    font-weight: 900;
+    opacity: 0.3;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.cardsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .cardsWrapper {
+        flex-direction: row;
+        gap: 32px;
+    }
+}
+
+.card {
+    position: relative;
+    flex: 1;
+    min-height: 340px;
+    height: 340px;
+    border-radius: 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-bottom: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding-left: 70px;
+        padding-bottom: 0;
+        min-height: 400px;
+        height: 400px;
+        align-items: center;
+    }
+}
+
+.cardContent {
+    text-align: left;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: transparent linear-gradient(0deg, var(--color-accent-alt) 30%, var(--color-accent-alt)00 70%);
+    border-radius: 32px;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+@media (min-width: 768px) {
+    .card::before {
+        background: transparent linear-gradient(90deg, var(--color-accent-alt) 30%, var(--color-accent-alt)00 70%);
+    }
+}
+
+.card:hover::before {
+    transform: scale(1.02);
+}
+
+.cardTitle {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.cardSubtext {
+    color: white;
+    font-size: var(--font-copytext);
+    line-height: var(--font-copytext-lh);
+    font-weight: 500;
+    max-width: 300px;
+}
+
+.cardArrow {
+    position: absolute;
+    right: -10px;
+    top: 20px;
+    width: auto;
+    height: 50%;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .cardArrow {
+        top: 50%;
+        transform: translateY(-50%);
+        height: 80%;
+    }
+}
+
+.card:hover .cardArrow {
+    transform: scale(1.02);
+}
+
+@media (min-width: 768px) {
+    .card:hover .cardArrow {
+        transform: translateY(-50%) scale(1.02);
+    }
+}

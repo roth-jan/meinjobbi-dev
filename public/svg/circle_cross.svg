@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <g id="Gruppe_7280" data-name="Gruppe 7280" transform="translate(-1813 -45)">
+    <path id="Vereinigungsmenge_32" data-name="Vereinigungsmenge 32" d="M22614,15376v-3h-3a2,2,0,0,1,0-4h3v-3a2,2,0,1,1,4,0v3h3a2,2,0,1,1,0,4h-3v3a2,2,0,0,1-4,0Z" transform="translate(28699.766 -5052.09) rotate(135)" fill="#ffaa3b"/>
+    <g id="Gruppe_6079" data-name="Gruppe 6079" transform="translate(958 -5182)">
+      <g id="Rechteck" transform="translate(855 5227)" fill="none" stroke="#ffaa3b" stroke-width="3">
+        <rect width="52" height="52" rx="26" stroke="none"/>
+        <rect x="1.5" y="1.5" width="49" height="49" rx="24.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

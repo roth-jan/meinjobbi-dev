@@ -1,0 +1,334 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+  Responsive Typography System
+
+  Desktop:
+  - Headline 1: 75px (clamp 50-75px), line-height: 75px
+  - Headline 2: 50px, line-height: 52px
+  - Headline 3: 36px, line-height: 36px
+  - Subtext: 24px, line-height: 34px
+  - Copytext: 18px, line-height: 26px
+  - Button: 20px
+
+  Tablet:
+  - Headline 1: 50px, line-height: 52px
+  - Headline 2: 40px, line-height: 42px
+  - Headline 3: 32px, line-height: 35px
+  - Subtext: 18px, line-height: 26px
+  - Copytext: 16px, line-height: 22px
+  - Button: 18px
+
+  Mobile:
+  - Headline 1: 35px, line-height: 37px
+  - Headline 2: 30px, line-height: 32px
+  - Headline 3: 25px, line-height: 27px
+  - Subtext: 18px, line-height: 26px
+  - Copytext: 16px, line-height: 22px
+  - Button: 18px
+*/
+
+html {
+    font-size: 16px;
+}
+
+/* Typography and component sizing variables */
+:root {
+    /* ── Brand Colors ── */
+    --color-primary: #5800ff;
+    --color-primary-dark: #2c0080;
+    --color-accent: #f5a623;
+    --color-accent-light: #ffaa3b;
+    --color-accent-hover: #eb9c33;
+    --color-accent-alt: #f7a335;
+
+    /* ── Backgrounds ── */
+    --color-bg-body: #080036;
+    --color-bg-light: #f3f2ff;
+    --color-bg-card: #ffffff;
+    --color-bg-input-light: #f4f8ff;
+
+    /* ── Text ── */
+    --color-text-primary: #ffffff;
+    --color-text-on-light: #001d47;
+    --color-text-on-light-alt: #080036;
+    --color-text-muted: #5d81b1;
+    --color-text-input: #eaf3f8;
+    --color-text-dark-purple: #21006b;
+
+    /* ── Borders ── */
+    --color-border-input: #5d81b1;
+    --color-border-light: #e0e0e0;
+    --color-border-secondary: #bfc8db;
+
+    /* ── Danger ── */
+    --color-danger: #ce0037;
+    --color-danger-hover: #a50029;
+    --color-danger-bg: #fff2f7;
+
+    /* ── Success ── */
+    --color-success-bg: #d3f9d8;
+    --color-success-text: #2f9e44;
+    --color-error-bg: #ffe0e0;
+    --color-error-text: #c92a2a;
+
+    /* ── Overlays / Shadows ── */
+    --color-overlay-purple: rgba(88, 0, 255, 0.95);
+    --color-overlay-purple-medium: rgba(40, 0, 120, 0.6);
+    --color-overlay-dark: rgba(0, 0, 0, 0.4);
+    --color-shadow-card: rgba(191, 200, 219, 0.3);
+
+    /* Mobile */
+    --font-headline-1: 35px;
+    --font-headline-1-lh: 37px;
+    --font-headline-2: 30px;
+    --font-headline-2-lh: 32px;
+    --font-headline-3: 25px;
+    --font-headline-3-lh: 27px;
+    --font-copytext: 16px;
+    --font-copytext-lh: 22px;
+    --font-subtext: 16px;
+    --font-subtext-lh: 24px;
+    --font-subtext-weight: 500;
+    --font-input: 14px;
+    --font-button: 18px;
+    --jobbi-button-height: 55px;
+    --jobbi-input-height: 55px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        /* Tablet */
+        --font-headline-1: 50px;
+        --font-headline-1-lh: 52px;
+        --font-headline-2: 40px;
+        --font-headline-2-lh: 42px;
+        --font-headline-3: 32px;
+        --font-headline-3-lh: 35px;
+        --font-copytext: 16px;
+        --font-copytext-lh: 22px;
+        --font-subtext: 18px;
+        --font-subtext-lh: 26px;
+        --font-subtext-weight: 500;
+        --font-input: 14px;
+        --font-button: 18px;
+        --jobbi-button-height: 55px;
+        --jobbi-input-height: 55px;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        /* Desktop */
+        --font-headline-1: clamp(50px, 5vw, 75px);
+        --font-headline-1-lh: 75px;
+        --font-headline-2: 50px;
+        --font-headline-2-lh: 52px;
+        --font-headline-3: 36px;
+        --font-headline-3-lh: 36px;
+        --font-copytext: 18px;
+        --font-copytext-lh: 26px;
+        --font-subtext: 24px;
+        --font-subtext-lh: 34px;
+        --font-subtext-weight: 500;
+        --font-input: 14px;
+        --font-button: 20px;
+        --jobbi-button-height: 60px;
+        --jobbi-input-height: 60px;
+    }
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--color-bg-body);
+    color: var(--color-text-primary);
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+/* Global heading styles */
+h1 {
+    font-size: var(--font-headline-1);
+    line-height: var(--font-headline-1-lh);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--font-headline-2);
+    line-height: var(--font-headline-2-lh);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--font-headline-3);
+    line-height: var(--font-headline-3-lh);
+    font-weight: 700;
+}
+
+/* Custom utility classes if needed */
+.jobbi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Mantine Select dropdown option */
+.mantine-Select-option {
+    font-size: 0.875rem;
+}
+
+.mantine-Select-option:hover,
+.mantine-Select-option[data-hovered] {
+    background-color: var(--color-overlay-purple-medium);
+}
+
+.mantine-Select-option[data-selected] {
+    background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
+/* ── Light mode overrides (Unternehmen) ── */
+[data-mantine-color-scheme="light"] {
+    --color-bg-body: #f3f2ff;
+    --color-text-primary: #001d47;
+    --color-text-input: #001d47;
+    --color-overlay-purple: rgba(88, 0, 255, 0.08);
+    --color-overlay-purple-medium: rgba(88, 0, 255, 0.15);
+}
+
+/* Mantine input text and placeholder colors */
+[data-mantine-color-scheme="dark"] .mantine-Input-input {
+    color: white;
+}
+
+[data-mantine-color-scheme="light"] .mantine-Input-input {
+    color: #001d47;
+}
+
+[data-mantine-color-scheme="dark"] .mantine-Input-input::placeholder,
+[data-mantine-color-scheme="dark"]
+    .mantine-PasswordInput-innerInput::placeholder {
+    color: rgba(255, 255, 255, 1);
+}
+
+[data-mantine-color-scheme="light"] .mantine-Input-input::placeholder,
+[data-mantine-color-scheme="light"]
+    .mantine-PasswordInput-innerInput::placeholder {
+    color: rgba(0, 29, 71, 0.5);
+}
+
+/* Card padding */
+.mantine-Card-root {
+    padding: 80px 120px 120px 120px;
+}
+
+/* Card title */
+.mantine-Card-root .mantine-Title-root {
+    font-size: 24px;
+    margin-bottom: 45px;
+}
+
+/* Hide default asterisk from label, show inside input */
+.mantine-InputWrapper-required {
+    display: none;
+}
+
+.mantine-Input-wrapper:has([required]) {
+    position: relative;
+}
+
+.mantine-Input-wrapper:has([required])::after {
+    content: "*";
+    position: absolute;
+    right: 12px;
+    top: 40%;
+    transform: translateY(-50%);
+    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+[data-mantine-color-scheme="dark"]
+    .mantine-Input-wrapper:has([required])::after {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .mantine-Card-root {
+        padding: 60px 15px;
+        margin-top: 40px;
+    }
+}
+
+/* Mantine Checkbox checked state */
+.mantine-Checkbox-input:checked {
+    background-color: white;
+    border-color: white;
+}
+
+/* Mantine Switch checked state */
+.mantine-Switch-track[data-checked] {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Mantine Accordion */
+.mantine-Accordion-control {
+    height: auto;
+}
+
+.mantine-Accordion-label {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px 0;
+}
+
+.mantine-Accordion-content {
+    font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+    .mantine-Accordion-control {
+        height: 70px;
+    }
+
+    .mantine-Accordion-label {
+        font-size: 20px;
+        line-height: normal;
+        padding: 0;
+    }
+
+    .mantine-Accordion-content {
+        font-size: 20px;
+    }
+}
+
+/* Mantine Accordion chevron */
+.mantine-Accordion-chevron {
+    transition: transform 0.3s ease;
+}
+
+.mantine-Accordion-control:hover .mantine-Accordion-chevron {
+    transform: rotate(-90deg);
+}
+
+.mantine-Accordion-control[data-active] .mantine-Accordion-chevron {
+    transform: rotate(-180deg);
+}
+
+.mantine-Accordion-control[data-active]:hover .mantine-Accordion-chevron {
+    transform: rotate(-180deg);
+}
